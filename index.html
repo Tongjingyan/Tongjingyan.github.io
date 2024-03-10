@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My HTML5 Page</title>
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS文件 -->
 </head>
 <body>
-    <p>Hi this is my fist personal page.</p>
-    <p>假如写一个日历的程序显示在现在的页面可以吗？</p>
-    <!-- 在这里添加你的页面内容 -->
-
+    <div class="calendar">
+        <div class="month">February 2024</div> <!-- 月份标题 -->
+        <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div> <!-- 星期几标题 -->
+        <div class="days">
+            <!-- 日历日期 -->
+            <div></div>
+            <div></div>
+            <!-- 继续添加日期 -->
+            <!-- 可以使用JavaScript来生成具体日期 -->
+        </div>
+    </div>
+    <div class="clock">
+        <div class="time" id="time"></div> <!-- 显示时间的元素 -->
+    </div>
+    <div class="animated-element" id="element">Hello, World!</div> <!-- 添加动画效果的元素 -->
+    <script src="script.js"></script> <!-- 引入JavaScript文件 -->
 </body>
 </html>

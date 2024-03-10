@@ -1,0 +1,50 @@
+/* 第一段是日历界面 */
+.calendar {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.month {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px 0;
+}
+
+.weekdays div {
+    flex: 1;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.days div {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* 添加一些样式以美化日历 */
+
+/* 实时更新时钟样式，合并了重复的.clock样式 */
+.clock {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.time {
+    font-size: 30px; /* 时钟时间的字体大小 */
+}
+
+/* 在此处可以添加其他样式以美化日历和时钟 */
