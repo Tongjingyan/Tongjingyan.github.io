@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS文件 -->
+    <title>带实时时钟的日历</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 链接到外部的CSS文件 -->
 </head>
 <body>
     <div class="calendar">
-        <div class="month">February 2024</div> <!-- 月份标题 -->
+        <div class="month">2024年2月</div> <!-- 月份标题 -->
         <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-        </div> <!-- 星期几标题 -->
+            <div>日</div>
+            <div>一</div>
+            <div>二</div>
+            <div>三</div>
+            <div>四</div>
+            <div>五</div>
+            <div>六</div>
+        </div> <!-- 星期标题 -->
         <div class="days">
-            <!-- 日历日期 -->
-            <div></div>
-            <div></div>
-            <!-- 继续添加日期 -->
-            <!-- 可以使用JavaScript来生成具体日期 -->
+            <!-- 日期将由JavaScript动态填充 -->
         </div>
     </div>
     <div class="clock">
-        <div class="time" id="time"></div> <!-- 显示时间的元素 -->
+        <div class="time" id="time">18:35:17</div> <!-- 显示时间的元素 -->
     </div>
-    <div class="animated-element" id="element">Hello, World!</div> <!-- 添加动画效果的元素 -->
-    <script src="script.js"></script> <!-- 引入JavaScript文件 -->
+    <div class="animated-element" id="element">你好，世界!</div> <!-- 将添加动画效果的元素 -->
+    <div class="animated-element" id="element1">猜猜我是谁😎😎😎!!</div> <!-- 将添加动画效果的元素 -->
+    <script src="script.js"></script> <!-- 链接到外部的JavaScript文件 -->
 </body>
 </html>

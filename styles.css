@@ -1,21 +1,37 @@
-/* 第一段是日历界面 */
+/* 整个网页的背景色，选用淡玉石绿色，以营造出中国风格 */
+body {
+    background-color: #E0E5DB; /* 淡玉石绿 */
+    font-family: 'Arial', sans-serif;
+    color: #604943; /* 适中的墨色，类似中国画中常用的颜色 */
+    line-height: 1.6; /* 增加行高以提高可读性 */
+}
+
+/* 日历界面样式，以白色和红色为主题 */
 .calendar {
     width: 300px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
-    font-family: Arial, sans-serif;
+    background-color: #cdd5e9; /* 纯白色背景 */
+    border: 2px solid #A41C1C; /* 中国红边框 */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 月份标题样式，使用中国红 */
 .month {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    color: #A41C1C; /* 中国红 */
+    padding: 5px 0;
 }
 
+/* 星期标题样式，使用淡玉石绿色背景和中国红字体 */
 .weekdays {
     display: flex;
     justify-content: space-between;
-    background-color: #eee;
+    background-color: #a7b49a; /* 淡玉石绿 */
+    color: #A41C1C; /* 中国红 */
     padding: 5px 0;
 }
 
@@ -23,28 +39,75 @@
     flex: 1;
 }
 
+/* 日期格样式，周末日期用红色字体表示 */
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
 
 .days div {
-    border: 1px solid #ccc;
     padding: 10px;
+    min-height: 50px; /* 确保有足够空间显示日期 */
 }
 
-/* 添加一些样式以美化日历 */
+.days div:nth-child(7n), /* 周六 */
+.days div:nth-child(7n-1) { /* 周日 */
+    color: #A41C1C; /* 周末使用中国红表示 */
+}
 
-/* 实时更新时钟样式，合并了重复的.clock样式 */
+/* 实时更新时钟样式 */
 .clock {
-    width: 200px;
-    margin: 20px auto;
-    text-align: center;
-    font-family: Arial, sans-serif;
+    position: fixed; /* 使用fixed定位，使时钟始终显示在左上角 */
+    top: 10px; /* 距离页面顶部10px */
+    left: 30px; /* 距离页面左侧10px */
+    font-size: 52px; /* 增大字体大小 */
+    color: #A41C1C; /* 中国红字体颜色 */
+    background-color: #bca574; /* 背景颜色设置为淡玉石绿，与页面背景保持一致 */
+    padding: 10px 15px; /* 增加内边距 */
+    border-radius: 5px; /* 添加圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+    z-index: 1000; /* 确保时钟在所有内容之上 */
 }
 
-.time {
-    font-size: 30px; /* 时钟时间的字体大小 */
+/* 其他样式保持不变 */
+
+/* 动画元素样式 */
+/* 动画元素样式 */
+.animated-element {
+    margin-top: 20px;
+    font-size: 1.5em; /* 增大动画元素的字体大小 */
+    color: #ad8c84; /* 使用深墨色字体 */
+    opacity: 0; /* 初始时元素不可见 */
+    transform: translateX(1000%); /* 开始时元素在屏幕左侧之外 */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* 平滑过渡动画效果和透明度 */
 }
 
-/* 在此处可以添加其他样式以美化日历和时钟 */
+/* 页面加载完成后，元素滑入并变为可见 */
+.animated-element.final-state {
+    opacity: 1; /* 元素变为可见 */
+    transform: translateX(0); /* 元素滑到最终位置 */
+}
+
+/* 添加微妙的“呼吸”效果，让元素轻微地缩放 */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1); /* 原始大小 */
+    }
+    50% {
+        transform: scale(1.05); /* 稍微放大 */
+    }
+}
+
+/* 将“呼吸”效果应用到动画元素 */
+.animated-element {
+    animation: breathe 3s ease-in-out infinite; /* 3秒为一个周期的无限循环动画 */
+}
+
+
+/* 新增的今天日期样式 */
+.today {
+    background-color: #A41C1C; /* 中国红背景 */
+    color: #FFD700; /* 金色字体，代表富贵 */
+    font-weight: bold;
+    border-radius: 50%; /* 圆形背景 */
+}
